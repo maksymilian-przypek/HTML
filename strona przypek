@@ -1,0 +1,376 @@
+[16:46] Maksymilian Przypek
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosta strona z navbarem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<div class="navbar">
+    <ul>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Strona główna</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Oferta</a></li>
+                <li><a href="#">Realizacje</a></li>
+                <li><a href="#">Zespół</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Aktualności</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Oferta</a></li>
+                <li><a href="#">Realizacje</a></li>
+                <li><a href="#">Zespół</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">O nas</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Oferta</a></li>
+                <li><a href="#">Realizacje</a></li>
+                <li><a href="#">Zespół</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Kontakt</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Szef</a></li>
+                <li><a href="#">Pracownik</a></li>
+                <li><a href="#">Sekretarka</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="logo_navbar">
+      <img src="Red_Panda.jpg" alt="" width="40" height="30">
+    </div>
+</div>
+</nav>
+<main>
+    <div class="galeria">
+        <img src="logotyp.jpg" alt="logo">
+        <img src="logotyp.jpg" alt="logo">
+        <img src="logotyp.jpg" alt="logo">
+ 
+        <img src="logotyp.jpg" alt="logo">
+        <img src="logotyp.jpg" alt="logo">
+        <img src="logotyp.jpg" alt="logo">
+    </div>
+    <div class="button">
+        <a href="test.html"><button>Pokaż więcej</button> </a>
+     
+    </div>
+    <div class="tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>naglowek 1</th>
+                    <th colspan="2">
+                        naglowek 2
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">pole1</td>
+                    <td>pole2</td>
+                    <td>pole3</td>
+                </tr>
+                <tr>
+                    <td>pole4</td>
+                    <td>pole5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ 
+ 
+    <div class="formularz">
+        <h2>Formularz Kontaktowy</h2>
+ 
+        <form action="/submit_form" method="post">
+            <label for="fname">Imię:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+   
+            <label for="lname">Nazwisko:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+   
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+   
+            <p>Płeć:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Mężczyzna</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Kobieta</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Inna</label><br>
+   
+            <label for="birthday">Data urodzenia:</label>
+            <input type="date" id="birthday" name="birthday"><br>
+   
+            <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+            <label for="subscribe">Zapisz się do newslettera</label><br>
+   
+            <input type="submit" value="Wyślij">
+ 
+            <label for="długość w centymetrach"></label>
+            <input type="range" class="rangetest123" max="10" min="1">
+        </form>
+    </div>
+</main>
+</body>
+</html>
+ 
+[16:46] Maksymilian Przypek
+body {
+    background-color: gray;
+}
+ 
+.navbar {
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    list-style: none;
+}
+ 
+.navbar > ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ 
+.navbar li {
+    list-style-type: none;
+}
+ 
+.navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+.dropdown {
+    position: relative;
+    border-radius: 5px;
+}
+ 
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 14px 16px;
+}
+ 
+.navbar a:hover, .dropdown:hover .dropbtn {
+    border-radius: 10px;
+    background-color: green;
+}
+ 
+.dropdown-content {
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+ 
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+}
+ 
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
+.logo_navbar {
+   
+    display: flex;
+    justify-content: flex-end;
+}
+ 
+.galeria{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.galeria img{
+ 
+    height: 100px;
+    width: 100px;
+}
+.galeria img:hover{
+    transform: scale(1.5);
+    transition:transform 0.5s;
+   
+}
+ 
+.button{
+   
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    text-decoration: none;
+}
+.button button{
+    background-color: green;
+    border-radius: 10px;
+    font-weight: 1000;
+    color: tomato;
+    font-size: larger;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    text-decoration: none;
+    position: center;
+   
+}
+ 
+.button button:hover{
+    background-color: tomato;
+    color: green;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+ 
+.tabela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    font-size: larger;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border: red;
+}
+ 
+.tabela table {
+    border-collapse: collapse;
+    /* Odstępy między komórkami */
+    border-width: 10px;
+}
+ 
+td, th{
+    border: 1px solid black;
+    border-collapse:collapse ;
+    width: 300px;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-width: 10px;
+    border-color: brown;
+}
+ 
+@keyframes przesuniecie {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(100px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    75% {
+        transform: translateX(-100 px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+ 
+ 
+.tabela table{
+    animation: przesuniecie 5s infinite;
+   
+}
+ 
+.formularz {
+    background-color: #f2f2f2; /* Jasne tło dla formularza */
+    padding: 20px; /* Odstępy wewnętrzne dla formularza */
+    border-radius: 10px; /* Zaokrąglone narożniki */
+    width: 50%; /* Szerokość formularza */
+    margin: auto; /* Wyśrodkowanie formularza */
+    padding-right: 50px;
+}
+ 
+.formularz h2 {
+    text-align: center; /* Wyśrodkowany nagłówek */
+    color: #333; /* Kolor tekstu */
+}
+ 
+.formularz label {
+    font-weight: bold; /* Pogrubienie etykiet */
+    display: block; /* Etykiety w nowej linii */
+    margin-bottom: 5px; /* Odstęp pod etykietą */
+    color: #555; /* Kolor etykiet */
+}
+ 
+.formularz input[type="text"],
+.formularz input[type="email"],
+.formularz input[type="date"] {
+    width: 100%; /* Szerokość inputów */
+    padding: 10px; /* Odstępy wewnętrzne */
+    margin-bottom: 20px; /* Odstęp pod inputami */
+    border-radius: 5px; /* Zaokrąglone narożniki inputów */
+    border: 1px solid #ddd; /* Subtelne obramowanie */
+}
+ 
+.formularz input[type="submit"] {
+    background-color: #4CAF50; /* Zielony kolor tła */
+    color: white; /* Biały tekst */
+    padding: 10px 20px; /* Odstępy */
+    border: none; /* Brak obramowania */
+    border-radius: 5px; /* Zaokrąglone narożniki */
+    cursor: pointer; /* Kursor wskazujący */
+}
+ 
+.formularz input[type="submit"]:hover {
+    background-color: #45a049; /* Ciemniejszy odcień zieleni przy najechaniu */
+}
+ 
+.formularz input[type="radio"],
+.formularz input[type="checkbox"] {
+    margin-right: 10px; /* Odstęp od tekstu */
+}
+ 
+/* Responsywność */
+@media (max-width: 600px) {
+    .formularz {
+        width: 90%; /* Większa szerokość na mniejszych ekranach */
+    }
+}
+ 
+ 
+ 
